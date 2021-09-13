@@ -28,12 +28,12 @@
           </div> 
           <div class="space">
             <h5>Select Tip %</h5>
-            <button> 5%</button>
-            <button> 10%</button>
-            <button> 15%</button>
-            <button> 25%</button>
-            <button> 50%</button>
-            <input type="number" placeholder="Custom" />
+            <button class="tip-perc"> 5%</button>
+            <button class="tip-perc"> 10%</button>
+            <button class="tip-perc"> 15%</button>
+            <button class="tip-perc"> 25%</button>
+            <button class="tip-perc"> 50%</button>
+            <input type="number" placeholder="Custom" class="custom"/>
           </div>
           <div class="space">
             <h5>Number of People</h5>
@@ -41,13 +41,30 @@
           </div>
         </div>
         <div class="column">
-          Tip Amount
-          / person
-        
-          Total
-          / person
-        
-          Reset
+          <div class="container-bckgrnd">
+            <div class="row">
+              <ul class="figures">
+                <li>Tip Amount <br />
+                  <sub>
+                    / person
+                  </sub>
+                </li>
+                <li class="amount">$14,95</li>
+              </ul>  
+            </div>
+            <div class="row">
+              <ul class="figures">
+                <li>
+                  Total <br />
+                  <sub>
+                    / person
+                  </sub>
+                </li>
+                <li class="amount">$14,95</li>
+              </ul>
+            </div>
+            <button class="reset mt-5"> Reset</button>
+          </div>
         </div>
       </div>
          

@@ -39,10 +39,67 @@ body {
 }
 
 .bill {
+  width: 90%;
+  padding: 5px;
   background-color: hsl(189, 41%, 97%);
   border: hsl(189, 41%, 97%);
 }
 
 .space {
   padding: 10px;
+}
+
+.tip-perc {
+  color: #fff;
+  font-weight: 700;
+  margin: 1px;
+  padding: 5px;
+  width: 30%;
+  background-color: hsl(183, 100%, 15%);
+  border: 1px solid hsl(183, 100%, 15%);
+  border-radius: 5px;
+}
+
+.tip-perc:hover {
+  color: hsl(172, 67%, 45%);
+  background-color: hsl(185, 41%, 84%);
+  border: none;
+}
+
+.custom {
+  color: hsl(184, 14%, 56%);
+  width: 30%;
+  margin: 1px;
+  padding: 5px;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+}
+
+.container-bckgrnd {
+  background-color: hsl(183, 100%, 15%);
+  height: auto;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.figures {
+  list-style-type: none;
+}
+
+.figures li {
+  display: inline-block;
+}
+
+.amount {
+  float: right;
+}
+
+.reset {
+  display: block;
+  margin: auto;
+  width: 60%;
+  padding: 5px;
+  background-color: hsl(172, 67%, 45%);
+  border: 1px solid hsl(172, 67%, 45%);
+  border-radius: 5px;
 }
