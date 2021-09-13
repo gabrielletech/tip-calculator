@@ -26,10 +26,23 @@ body {
 
 .calculator {
     position: relative;
-    width: 100%;
-    max-width: 320px;
+    height: 25vh;
     margin: auto;
     background-color: #fff;
-    
-    
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.bill {
+  background-color: hsl(189, 41%, 97%);
+  border: hsl(189, 41%, 97%);
+}
+
+.space {
+  padding: 10px;
 }

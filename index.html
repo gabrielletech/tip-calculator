@@ -18,30 +18,41 @@
 <body>
   <div class="container">
     <div class="calculator">
-      <div class="box-left">
-        <header>Bill</header>
-        <input type="number" placeholder="$" />
+      <div class="row">
+        <div class="column">
+          <div class="space">
+            <header>
+              <h5>Bill</h5>
+            </header>
+            <input type="number" placeholder="$" class="bill"/>
+          </div> 
+          <div class="space">
+            <h5>Select Tip %</h5>
+            <button> 5%</button>
+            <button> 10%</button>
+            <button> 15%</button>
+            <button> 25%</button>
+            <button> 50%</button>
+            <input type="number" placeholder="Custom" />
+          </div>
+          <div class="space">
+            <h5>Number of People</h5>
+            <input type="number" class="bill" />
+          </div>
+        </div>
+        <div class="column">
+          Tip Amount
+          / person
+        
+          Total
+          / person
+        
+          Reset
+        </div>
       </div>
-      <div class="box-right">
+         
+      
 
-      </div>
-      Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
     </div>
   </div>
 
