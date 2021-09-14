@@ -1,6 +1,9 @@
 /* Mobile */
 @media only screen and (max-width: 375px) {
-    
+    .calculator {
+      position: relative;
+      height: 50vh;
+    }
   }
 
 /* Desktop */
@@ -24,9 +27,10 @@ body {
     background-color: hsl(185, 41%, 84%);
 }
 
+
 .calculator {
     position: relative;
-    height: 25vh;
+    height: 35vh;
     margin: auto;
     background-color: #fff;
     border-radius: 10px;
@@ -39,10 +43,31 @@ body {
 }
 
 .bill {
+  font-size: 24px;
   width: 90%;
+  padding: 7px;
+  background-color: hsl(189, 41%, 97%);
+  border: hsl(189, 41%, 97%);
+  background-image: url('./images/icon-dollar.svg');
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: 10px 1rem;
+}
+
+.bill:active {
+  border: hsl(172, 67%, 45%);
+}
+
+.persons {
+  width: 90%;
+  font-size: 24px;
   padding: 5px;
   background-color: hsl(189, 41%, 97%);
   border: hsl(189, 41%, 97%);
+  background-image: url('./images/icon-person.svg');
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: 10px 1rem;
 }
 
 .space {
@@ -51,7 +76,9 @@ body {
 
 .tip-perc {
   color: #fff;
+  font-size: 22px;
   font-weight: 700;
+  font-family: 'Space Mono', monospace;
   margin: 1px;
   padding: 5px;
   width: 30%;
@@ -61,12 +88,15 @@ body {
 }
 
 .tip-perc:hover {
-  color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
   background-color: hsl(185, 41%, 84%);
   border: none;
 }
 
 .custom {
+  font-size: 22px;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
   color: hsl(184, 14%, 56%);
   width: 30%;
   margin: 1px;
@@ -76,10 +106,11 @@ body {
 }
 
 .container-bckgrnd {
+  margin: 20px;
   background-color: hsl(183, 100%, 15%);
   height: auto;
   border-radius: 10px;
-  padding: 15px;
+  padding: 20px;
 }
 
 .figures {
@@ -92,6 +123,21 @@ body {
 
 .amount {
   float: right;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.tip-amount {
+  color: #fff;
+}
+
+sub {
+  color: hsl(185, 41%, 84%);
+}
+
+.total {
+  color: #fff;
 }
 
 .reset {

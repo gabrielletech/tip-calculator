@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css" >
+  <script src="https://kit.fontawesome.com/a94b7876d2.js" crossorigin="anonymous"></script>
+  
   
   <title>Frontend Mentor | Tip calculator app</title>
 
@@ -24,7 +26,7 @@
             <header>
               <h5>Bill</h5>
             </header>
-            <input type="number" placeholder="$" class="bill"/>
+            <input type="number" class="bill"/>
           </div> 
           <div class="space">
             <h5>Select Tip %</h5>
@@ -37,14 +39,14 @@
           </div>
           <div class="space">
             <h5>Number of People</h5>
-            <input type="number" class="bill" />
+            <input type="number" class="persons">
           </div>
         </div>
         <div class="column">
           <div class="container-bckgrnd">
             <div class="row">
               <ul class="figures">
-                <li>Tip Amount <br />
+                <li class="tip-amount">Tip Amount <br />
                   <sub>
                     / person
                   </sub>
@@ -54,7 +56,7 @@
             </div>
             <div class="row">
               <ul class="figures">
-                <li>
+                <li class="total">
                   Total <br />
                   <sub>
                     / person
