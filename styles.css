@@ -1,9 +1,6 @@
 /* Mobile */
 @media (min-width: 375px) and (max-width: 576px) {
-    .calculator {
-      position: relative;
-      height: 100vh;
-    }
+    
   }
 
 /* Desktop */
@@ -15,37 +12,38 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Space Mono', monospace; 
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Space Mono', monospace;
-    background-color: hsl(185, 41%, 84%);
+    background-color: hsl(185, 41%, 84%) ;
 }
 
+.app-name {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-md {
+  background-color: #fff;
+  justify-content: center;
+   border-radius: 10px;
+}
 
 .calculator {
-    position: relative;
-    height: 35vh;
-    margin: auto;
     background-color: #fff;
     border-radius: 10px;
     padding: 10px;
-}
-
-.column {
-  float: left;
-  max-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .bill {
   font-size: 24px;
-  width: 90%;
   padding: 7px;
   background-color: hsl(189, 41%, 97%);
   border: hsl(189, 41%, 97%);
@@ -60,7 +58,6 @@ body {
 }
 
 .persons {
-  width: 90%;
   font-size: 24px;
   padding: 5px;
   background-color: hsl(189, 41%, 97%);
@@ -69,6 +66,10 @@ body {
   background-repeat: no-repeat;
   background-size: 10px;
   background-position: 10px 1rem;
+}
+
+.persons:active {
+  border: orangered;
 }
 
 .space {
@@ -82,7 +83,7 @@ body {
   font-family: 'Space Mono', monospace;
   margin: 1px;
   padding: 5px;
-  width: 30%;
+  width: 25%;
   background-color: hsl(183, 100%, 15%);
   border: 1px solid hsl(183, 100%, 15%);
   border-radius: 5px;
@@ -99,7 +100,7 @@ body {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
   color: hsl(184, 14%, 56%);
-  width: 30%;
+  width: 25%;
   margin: 1px;
   padding: 5px;
   background-color: hsl(189, 41%, 97%);
@@ -109,7 +110,6 @@ body {
 .container-bckgrnd {
   margin: 20px;
   background-color: hsl(183, 100%, 15%);
-  height: auto;
   border-radius: 10px;
   padding: 20px;
 }
@@ -124,7 +124,7 @@ body {
 
 .amount {
   float: right;
-  color: #fff;
+  color: hsl(172, 67%, 45%);
   font-size: 24px;
   font-weight: 700;
 }
