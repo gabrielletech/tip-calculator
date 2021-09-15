@@ -1,13 +1,13 @@
 /* Mobile */
-@media only screen and (max-width: 375px) {
+@media (min-width: 375px) and (max-width: 576px) {
     .calculator {
       position: relative;
-      height: 50vh;
+      height: 100vh;
     }
   }
 
 /* Desktop */
-@media only screen and (min-width: 1440px) {
+@media only screen and (max-width: 1440px) {
     
   } 
 
@@ -21,6 +21,7 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     font-family: 'Space Mono', monospace;
@@ -39,7 +40,7 @@ body {
 
 .column {
   float: left;
-  width: 50%;
+  max-width: 50%;
 }
 
 .bill {
