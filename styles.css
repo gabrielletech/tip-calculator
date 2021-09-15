@@ -45,6 +45,7 @@ body {
 .bill {
   font-size: 24px;
   padding: 7px;
+  text-align: right;
   background-color: hsl(189, 41%, 97%);
   border: hsl(189, 41%, 97%);
   background-image: url('./images/icon-dollar.svg');
@@ -60,6 +61,7 @@ body {
 .persons {
   font-size: 24px;
   padding: 5px;
+  text-align: right;
   background-color: hsl(189, 41%, 97%);
   border: hsl(189, 41%, 97%);
   background-image: url('./images/icon-person.svg');
@@ -107,6 +109,10 @@ body {
   border: none;
 }
 
+.number-of-people {
+  display: flex;
+}
+
 .container-bckgrnd {
   margin: 20px;
   background-color: hsl(183, 100%, 15%);
@@ -149,4 +155,9 @@ sub {
   background-color: hsl(172, 67%, 45%);
   border: 1px solid hsl(172, 67%, 45%);
   border-radius: 5px;
+}
+
+#alert {
+  color: orangered;
+  font-size: 12px;
 }
