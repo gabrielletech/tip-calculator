@@ -16,8 +16,6 @@
   >
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="./styles.css" >
-  <!-- JS File -->
-  <script src="./main.js"></script>
 
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
@@ -32,16 +30,16 @@
             <header>
               <h5>Bill</h5>
             </header>
-            <input type="number" class="bill" id="bill"/>
+            <input type="number" class="bill"/>
           </div> 
           <div class="space">
             <h5>Select Tip %</h5>
-            <button class="tip-perc" id="five"> 5%</button>
-            <button class="tip-perc" id="ten"> 10%</button>
-            <button class="tip-perc"  id="fifteen"> 15%</button>
-            <button class="tip-perc" id="twenty-five"> 25%</button>
-            <button class="tip-perc" id="fifty"> 50%</button>
-            <input type="number" placeholder="Custom" class="custom" id="custom"/>
+            <button class="tip-perc" value="5"> 5%</button>
+            <button class="tip-perc" value="10"> 10%</button>
+            <button class="tip-perc"  value="15"> 15%</button>
+            <button class="tip-perc" value="25"> 25%</button>
+            <button class="tip-perc" value="50"> 50%</button>
+            <input type="number" placeholder="Custom" class="custom" />
           </div>
           <div class="space">
             <div class="number-of-people">
@@ -60,7 +58,7 @@
                     / person
                   </sub>
                 </li>
-                <li class="amount" id="tip-pp">$14,95</li>
+                <li class="amount" id="tip-pp"></li>
               </ul>  
             </div>
             <div class="row">
@@ -71,7 +69,7 @@
                     / person
                   </sub>
                 </li>
-                <li class="amount" id="amount-pp">$14,95</li>
+                <li class="amount" id="amount-pp"></li>
               </ul>
             </div>
             <button class="reset mt-5"> Reset</button>
@@ -80,5 +78,8 @@
     </div>
   </div>
 
+  <!-- JS File -->
+  <script src="./main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </body>
 </html>

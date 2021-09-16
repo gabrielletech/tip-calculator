@@ -1,46 +1,37 @@
 // variables
 
-let bill = document.getElementById("bill").value;
+const bill = document.querySelector('.bill');
 
-let option;
 
 // tip percentages
-let tipA = document.getElementById('five');
-let tipB = document.getElementById('ten');
-let tipC = document.getElementById('fifteen');
-let tipD = document.getElementById('twenty-five');
-let tipE = document.getElementById('fifty');
+const tip_perc = document.getElementById('tip-perc');
+
+// custom tip percentage
+const custom_tip = document.querySelector('.custom')
 
 // number of people
-let numOfPeople = document.getElementsByClassName('persons').value;
-console.log(numOfPeople);
+const num_of_people = document.querySelector('.persons');
 
-// tip amount per person
-let tipPp = document.getElementById('tip-pp')
-
-// validate input 
-if (numOfPeople == 0) {
-    document.getElementById('alert').innerHTML += " Can't be zero ";
-}
-
-function calculateTip() {
-    switch(option) {
-       case tipA :
-           bill * 0.05;
-           break;
-        case tipB :
-            bill * 0.1;
-            break;
-        case tipC :
-            bill * 0.15;
-            break;
-        case tipD :
-            bill * 0.25;
-            break;
-        case tipE :
-            bill * 0.5;;
-            break;
+$(document).ready(function() {
+    tip_perc.addEventListener('click', function() {
+        console.log(tip_perc.value);
+    });
+    
+    function calculateTip() {
+        let billAmt = Number(bill.value);
+        let tip = Number(tip_perc.value) / 100;
+        let people = Number(num_of_people.value);
+        let tipAmount = (billAmt * tip) / people;
+        let total = billAmt / people;
+    
+        let showTipAmt = document.querySelector('#tip-pp');
+        showTipAmt.innerHTML = '$' + tipAmount.toFixed(2) + ((people > 1));
+    
+        let showTotal = document.querySelector('#amount-pp');
+        showTotal.innerHTML = '$' + total.toFixed(2) + ((people > 1));
     }
+})
 
-    tipPp = bill 
-}
+
+
+
