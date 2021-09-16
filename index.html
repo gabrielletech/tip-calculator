@@ -31,15 +31,15 @@
             <header>
               <h5>Bill</h5>
             </header>
-            <input type="text" class="bill"/>
+            <input type="text" class="bill" id="bill" onchange="setBill()" />
           </div> 
           <div class="space">
             <h5>Select Tip %</h5>
-            <input type="button" class="tip-perc" id="five-perc" value="5%"  />
-            <input type="button" class="tip-perc" id="ten-perc" value="10"  />
-            <input type="button" class="tip-perc" id="fifteen-perc" value="15"  />
-            <input type="button" class="tip-perc" id="twenty-perc" value="25"  />
-            <input type="button" class="tip-perc" id="fifty-perc"value="50"  />
+            <input type="button" class="tip-perc" value="5"  />
+            <input type="button" class="tip-perc" value="10"  />
+            <input type="button" class="tip-perc" value="15"  />
+            <input type="button" class="tip-perc" value="25"  />
+            <input type="button" class="tip-perc" value="50"  />
             <input type="number" placeholder="Custom" class="custom" />
           </div>
           <div class="space">
@@ -47,7 +47,7 @@
               <h5>Number of People</h5>
               <p id="alert"></p>
             </div>
-            <input type="number" class="persons" id="">
+            <input type="number" class="persons" >
           </div>
         </div>
         <div class="col-sm-6">
@@ -73,7 +73,7 @@
                 <li class="amount" id="amount-pp"></li>
               </ul>
             </div>
-            <button class="reset mt-5"> Reset</button>
+            <button class="reset mt-5" id="reset"> Reset</button>
           </div>
         </div>
     </div>

@@ -1,13 +1,10 @@
-// variables
+// constant variables
 
-const get_bill = document.querySelector('.bill');
+// bill amount
+const get_bill = document.getElementById('bill');
 
-// tip percentages
-let five_perc = document.getElementById('five-perc');
-let ten_perc = document.getElementById('ten-perc');
-let fifteen_perc = document.getElementById('fifteen-perc');
-let twenty_perc = document.getElementById('twenty-perc');
-let fifty_perc = document.getElementById('fifty-perc');
+// tip percentage btns
+const tip_perc = document.querySelectorAll('.tip-perc');
 
 // custom tip percentage
 const custom_tip = document.querySelector('.custom')
@@ -15,47 +12,52 @@ const custom_tip = document.querySelector('.custom')
 // number of people
 const num_of_people = document.querySelector('.persons');
 
-    get_bill.addEventListener('input', function() {
-        let bill = get_bill.value;
-        console.log(bill);
+// error message for number of people 
+const error_msg = document.getElementById('alert');
+
+// button reset 
+const reset = document.getElementById('reset');
+
+let people = 1;
+
+tip_perc.forEach(perc => {
+    perc.addEventListener('click', selectTip);
+});
+
+function setBill() {
+    billAmt = get_bill.value;
+    console.log(billAmt)
+};
+
+function selectTip() {
+    tip_perc.forEach(perc => {
+        if (event.target.value == perc.value) {
+            tipAmt = parseFloat(perc.value) / 100;
+        }
     })
 
-    five_perc.addEventListener('click', function() {
-        five_perc = 0.05;
-        console.log(five_perc);
-    })
+    calculateTip();
+    console.log(tipAmt);
+}
 
-    ten_perc.addEventListener('click', function() {
-        ten_perc = 0.1;
-        console.log(ten_perc);
-    })
+function calculateTip() {
+    if ( people >= 1 ) {
+        let tip = billAmt * tipAmt ;
+        console.log(tip)
+    }
+}
 
-    fifteen_perc.addEventListener('click', function() {
-        fifteen_perc = 0.15;
-        console.log(fifteen_perc);
-    })
-
-    twenty_perc.addEventListener('click', function() {
-        twenty_perc = 0.25;
-        console.log(twenty_perc);
-    })
-
-    fifty_perc.addEventListener('click', function() {
-        fifty_perc = 0.5;
-        console.log(fifty_perc);
-    })
-
-    custom_tip.addEventListener('input', () => {
-        let customValue = custom_tip.value
-        console.log(customValue);
-    });
     
-    function calculateTip() {
-        let billAmt = Number(bill.value);
-        let tip = Number(tip_perc.value) / 100;
+  /*  function calculateTip() {
+        get_bill.addEventListener('input', function() {
+            let bill = get_bill.value;
+            console.log(bill);
+        })
+       // let billAmt = Number(bill.value);
+        //let tip = Number(tip_perc.value) / 100;
         let people = Number(num_of_people.value);
-        let tipAmount = (billAmt * tip) / people;
-        let total = billAmt / people;
+        let tipAmount = (bill * tip) / people;
+        let total = bill / people;
     
         let showTipAmt = document.querySelector('#tip-pp');
         showTipAmt.innerHTML = '$' + tipAmount.toFixed(2) + ((people > 1));
@@ -65,5 +67,5 @@ const num_of_people = document.querySelector('.persons');
     }
 
 
-
+*/
 
