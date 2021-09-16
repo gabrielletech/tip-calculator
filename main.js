@@ -19,20 +19,27 @@ const error_msg = document.getElementById('alert');
 const reset = document.getElementById('reset');
 
 let people = 1;
+let tipAmt = 0;
 
+// captures the selected tip value
 tip_perc.forEach(perc => {
     perc.addEventListener('click', selectTip);
 });
 
+// captures custom tip value
+custom_tip.addEventListener('input', setCustomTip);
+
+// reads and sets the bill value input
 function setBill() {
     billAmt = get_bill.value;
     console.log(billAmt)
 };
 
+// listens to which tip percentage is selected and adjusts the percentage accordingly
 function selectTip() {
     tip_perc.forEach(perc => {
         if (event.target.value == perc.value) {
-            tipAmt = parseFloat(perc.value) / 100;
+            tipAmt = parseFloat(perc.value) / 100; 
         }
     })
 
@@ -40,10 +47,30 @@ function selectTip() {
     console.log(tipAmt);
 }
 
+// reads and sets the custom tip perscentage entered by user
+function setCustomTip() {
+    customTip = parseFloat(custom_tip.value) / 100;
+    console.log(customTip);
+    
+    calculateTip();
+}
+
+// reads and sets the number of peeople 
+function setPeople() {
+    people = num_of_people.value;
+    console.log(people)
+}
+
+// main calculations carried out here
 function calculateTip() {
     if ( people >= 1 ) {
         let tip = billAmt * tipAmt ;
         console.log(tip)
+    }
+
+    if(custom_tip.value !== '') {
+        let tip = billAmt * customTip;
+        console.log(tip);
     }
 }
 
