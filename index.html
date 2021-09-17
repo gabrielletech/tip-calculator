@@ -22,7 +22,7 @@
 </head>
 <body>
   <div class="app-name">
-    <h3>S P L I <br /> T T E R</h3>
+    <img src="./images/logo.svg" class="logo" />
   </div>
   <div class="container-md mt-5">
       <div class="row align-items-center">
@@ -47,7 +47,7 @@
               <h5>Number of People</h5>
               <p id="alert"></p>
             </div>
-            <input type="number" class="persons" >
+            <input type="number" class="persons" onchange="setPeople()" >
           </div>
         </div>
         <div class="col-sm-6">
@@ -73,7 +73,7 @@
                 <li class="amount" id="amount-pp"></li>
               </ul>
             </div>
-            <button class="reset mt-5" id="reset"> Reset</button>
+            <button class="reset mt-5" id="reset" onclick="reset()"> Reset</button>
           </div>
         </div>
     </div>

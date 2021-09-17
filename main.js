@@ -16,7 +16,7 @@ const num_of_people = document.querySelector('.persons');
 const error_msg = document.getElementById('alert');
 
 // button reset 
-const reset = document.getElementById('reset');
+//const reset = document.getElementById('reset');
 
 let people = 1;
 let tipAmt = 0;
@@ -59,19 +59,52 @@ function setCustomTip() {
 function setPeople() {
     people = num_of_people.value;
     console.log(people)
+
+    calculateTip();
 }
 
 // main calculations carried out here
 function calculateTip() {
     if ( people >= 1 ) {
-        let tip = billAmt * tipAmt ;
+        let tip = (billAmt * tipAmt) / people ;
+        let total = billAmt / people;
         console.log(tip)
+
+        let showTipAmt = document.getElementById('tip-pp');
+        showTipAmt.innerHTML = '$' + tip.toFixed(2);
+
+        let showTotal = document.getElementById('amount-pp');
+        showTotal.innerHTML = '$' + total.toFixed(2);
+
     }
 
     if(custom_tip.value !== '') {
-        let tip = billAmt * customTip;
+        let tip = (billAmt * customTip) / people;
+        let total = billAmt / people;
         console.log(tip);
+
+        let showTipAmt = document.getElementById('tip-pp');
+        showTipAmt.innerHTML = '$' + tip.toFixed(2);
+
+        let showTotal = document.getElementById('amount-pp');
+        showTotal.innerHTML = '$' + total.toFixed(0);
+
     }
+
+    
+    
+}
+
+function reset() {
+    get_bill.value = '';
+    custom_tip.value = '';
+    num_of_people.value = '';
+
+    let showTipAmt = document.getElementById('tip-pp');
+    let showTotal = document.getElementById('amount-pp');
+
+    showTipAmt.innerHTML = '$' + 0.00;
+    showTotal.innerHTML = '$' + 0.00
 }
 
     
